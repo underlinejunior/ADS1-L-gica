@@ -111,16 +111,14 @@ e apresente o nome e peso da mais pesada e o nome e altura da mais alta.
 
 //6.Fazer um algoritmo que calcule e escreva o valor de S onde: S=1/1-2/4+3/9-4/16+5/25-6/36...-10/100
 
-        inteiro total=0,n=1,d=1
-		enquanto(n<=10){
-			enquanto(d<100){
-				d=n*n
-				escreva(n,"/",d," ")
-				se(n%2==0)
-					total-=n/d
-				senao
-					total+=n/d
-				n++		
+		real total=0,d
+		para(inteiro n=1; n<=10;n++){
+			d=n*n
+			escreva(n,"/",d," ")
+			se(n % 2==0)
+				total-=n/d
+			senao
+				total+=n/d	
 			}
 			escreva(" total:",total)
 			}
