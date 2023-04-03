@@ -32,7 +32,7 @@ calcule e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto.
 		escreva("Informe o preço do produto: ")
 		leia(valorReal)
 		valorPromocional = valorReal-valorReal*0.05
-		escreva("O PROÇO PROMOCIONAL fica em R$ {2}",valorPromocional)
+		escreva("O PROÇO PROMOCIONAL fica em R$",valorPromocional)
 /*
 4. Escreva um programa para calcular a redução do tempo de vida de um fumante.
 Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou.
