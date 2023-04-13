@@ -251,7 +251,7 @@ série tem a seguinte forma: 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
 			c=a+b
 			a=b
 			b=c
-			escreva(c," ")
+			escreva(a," ")
 
 /*
 15. Faça um programa que dado um valor n, gere um "quadrado" de n linhas e n colunas
