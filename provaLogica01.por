@@ -71,22 +71,19 @@ Para tal desenvolva um algoritmo que:
 4. O salário após a dedução do IR (salário líquido/a receber) é o valor que tenho direito a receber.
 */
 
+
 	real salario,inss=0.0,ir=0.0,salarioBruto,liquido
 	escreva("Informe o salario: ")
 	leia(salario)
 	se(salario<=1302){
 		inss = (salario*7.5)/100
-	}
-	se(salario>1302 e salario<2571.30){
+	}senao se(salario<2571.30){
 		inss = (salario*9)/100
-	}
-	se(salario>=2571.3 e salario<3856.95){
+	}senao se(salario<3856.95){
 		inss = (salario*12)/100
-	}
-	se(salario>=3856.95 e salario<7507.5){
+	}senao se(salario<7507.5){
 		inss = (salario*14)/100
-	}
-	se(salario>=7507.5){
+	}senao{
 		inss = (7507.49*14)/100
 	}
 	escreva("INSS = ",inss,"\n")
@@ -96,24 +93,20 @@ Para tal desenvolva um algoritmo que:
 	se(salarioBruto<1903.98){
 		ir = 0.0
 		escreva("IR = ISENTO\n")
-	}
-	se(salarioBruto>=1903.98 e salarioBruto<2826.66){
+	}senao se(salarioBruto<2826.66){
 		ir = ((salarioBruto*7.5)/100) - 142.80
 		escreva("IR = ",ir,"\n")
-	}
-	se(salarioBruto>=2826.66 e salarioBruto<3751.06){
+	}senao se(salarioBruto<3751.06){
 		ir = ((salarioBruto*15)/100) - 354.80
 		escreva("IR = ",ir,"\n")
-	}
-	se(salarioBruto>=3751.06 e salarioBruto<4664.69){
+	}senao se(salarioBruto<4664.69){
 		ir = ((salarioBruto*22.51)/100) - 636.13
 		escreva("IR = ",ir,"\n")
-	}
-	se(salarioBruto>=4664.69){
+	}senao{
 		ir = ((salarioBruto*27.5)/100) - 869.36
 		escreva("IR = ",ir,"\n")
 	}
-
 	liquido = salarioBruto - ir
-	
 	escreva("Liquido =",liquido)
+	}
+}
