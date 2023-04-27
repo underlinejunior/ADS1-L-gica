@@ -13,10 +13,10 @@ c. Quantos são maiores do que 50.
 			se(num<=25){
 				quant0a25++
 			}
-			se(num>25 e num<=50){
+			senao se(num>25 e num<=50){
 				quant26a50++
 			}
-			se(num>50){
+			senao se(num>50){
 				quantMais50++
 			}	
 		}
@@ -46,7 +46,7 @@ e. Quantas mulheres tem mais de 20 anos.
 				mediaIdadeHomens+=idade
 			}
 			mediaIdade+=idade
-			se(sexo =='f' ou sexo=='F'){
+			senao se(sexo =='f' ou sexo=='F'){
 				quantMulheres++
 				se(idade>20){
 					quantMulheresMais20++
