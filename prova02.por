@@ -3,7 +3,7 @@ ong e produz como saída a quantidade de total dos animais e as correspondentes 
 cada tipo.	
 */
 
-		inteiro totalGatos=10,totalCaes=20
+		inteiro totalGatos=10,totalCaes=20,totalAnimais=totalGatos+totalCaes
 		cadeia tipoAnimal=""
 		
 		escreva("Que animal deseja totalizar?\n")
@@ -17,6 +17,7 @@ cada tipo.
 		}senao se(tipoAnimal =="cachorro"){
 			escreva("TOTAL de caes na ONG é: ",totalCaes)
 		}
+		escreva("A ONG possui ",totalAnimais," animais")
 
 /* 
 leia uma quantidade indeterminada de despescas que ocorreram durantes os dias de um mês. 
