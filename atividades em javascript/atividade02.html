@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="atividade02.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Desenvolva um algoritmo utilizando JavaScript para os casos abaixo.</h1>
+    <ul>
+        <li>
+            a) Leia a distância percorrida por um carro em km e a quantidade de tempo gasta em
+            horas, calcule e exiba a velocidade média em km/h.</li>
+        <div>
+            <label> Distancia(km): </label><input id="q1input1" type="number">
+            <label>Distancia(h): </label><input id="q1input2" type="number">
+            <button onclick="velocidadeMedia()">calcular</button>
+            <span id="q1Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            b) Escreva um programa que pergunte a velocidade de um carro. Caso ultrapasse
+            80Km/h, exiba uma mensagem dizendo que o usuário foi multado.</li>
+        <div>
+            <label> velocidade(km/h): <input id="q2input1" type="number"></label><br />
+            <button onclick="velocidadeMaxima()">Registrar</button>
+            <span id="q2Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            c) Utilizando com base a questão anterior, incremente exibindo o valor da multa
+            cobrando R$5 por Km acima da velocidade permitida.</li>
+        <div>
+            <label> velocidade(km/h): <input id="q3input1" type="number"></label><br />
+            <button onclick="MultaAPagar()">Registrar</button>
+            <span id="q3Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            d) Leia uma despesa gasta em uma mesa de restaurante, calcule os 10% e exiba o
+            valor a pagar.</li>
+        <div>
+            <label> consumo(R$): <input id="q4input1" type="number"></label><br />
+            <button onclick="totalAPagar()">Registrar</button>
+            <span id="q4Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            e) Leia a idade de uma pessoa e escreva se ela é criança, adolescente ou adulto. Ob-
+            servação: criança até 12 anos, adolescente até 18 e acima disso consideraremos
+            todos como adultos.</li>
+        <div>
+            <label> Idade: <input id="q5input1" type="number"></label><br />
+            <button onclick="idade()">Registrar</button>
+            <span id="q5Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            f) Ler o tempo de serviço de um funcionário, em anos, e seu respectivo salário. Se ele
+            tiver 5 anos ou mais de tempo de serviço e salário inferior a R$2.500,00, calcular o
+            novo salário com reajuste de 20%, caso contrário calcular com reajuste de 5%. Exibir
+            o novo salário do funcionário.</li>
+        <div>
+            <label> Tempo de Serviço(anos): <input id="q6input1" type="number"></label><br />
+            <label> Salário Atual: <input id="q6input2" type="number"></label><br />
+            <button onclick="reajuste()">Calcular</button>
+            <span id="q6Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            g) Crie um algoritmo que leia um número inteiro N e escreva os N primeiros números
+            múltiplos de 3.</li>
+        <div>
+            <label> Quantidade: <input id="q7input1" type="number"></label><br />
+            <button onclick="multiplosDeTres()">Calcular</button>
+            <span id="q7Resultado"></span>
+        </div>
+        <hr />
+        <li>
+            h) Ler uma série de números do teclado. Exibir o maior e o menor número lido. O Flag
+            é um número negativo qualquer (que não deve ser considerado).
+        </li>
+        <div>
+            <label> numero: <input id="q8input1" type="number"></label><br />
+            <button onclick="maiorEMenor()">Registrar</button>
+            <span id="q8Resultado"></span>
+        </div>
+        <hr />
+    </ul>
+</body>
+
+</html>

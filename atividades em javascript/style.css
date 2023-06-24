@@ -1,0 +1,65 @@
+
+*{
+    border: none;
+    border-radius: 1rem;
+    margin:0 auto;
+}    
+body{
+    padding:2rem;
+    width: 60vw;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: gray;
+    
+}
+h1{
+    width: 100%;
+}
+div{
+    background-color: rgb(171, 170, 170);
+    border-radius: 2rem;
+    padding:2rem;
+    text-align: end;
+    width: 25rem;
+    margin-left:2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: 2rem 2rem 2rem black;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+}
+input{
+    margin-bottom:2rem;
+    padding:0.3rem;
+    text-align: center;
+}
+ul li{
+    list-style-type: none;;
+    margin:2rem;
+    width: 100%;
+    padding-top:1rem;
+    font-size: 1.2rem;
+    border-top:0.2rem dotted black
+}
+button{
+    background-color:  rgb(109, 222, 86);
+    text-transform: uppercase;
+    padding:1rem 0.8rem;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: greenyellow;
+}
+span{
+    font-size: 2rem;
+    font-weight: bolder;
+    color:black;    
+    padding: 1rem;
+}

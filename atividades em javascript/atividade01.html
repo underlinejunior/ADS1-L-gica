@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade01</title>
+    <script src="atividade01q02.js"></script>
+    <script src="atividade01q03.js"></script>
+    <script src="atividade01q04.js"></script>
+</head>
+
+<body>
+    <h1>Atividade 01</h1>
+    <p>1. Exiba meu primeiro programa utilizando Java Script utilizando o código dentro do
+        arquivo html.</p>
+    <span id="um"><button onclick="meuPrimeiroPrograma()" id="buttom01">click</button></span>
+    <script>
+        function meuPrimeiroPrograma() {
+            document.getElementById('um').innerHTML = '';
+            document.getElementById('um').innerHTML = '<b>meu primeiro programa</b>';
+        } </script>
+
+    <p>2. Refaça o exemplo anterior, em outros arquivos, onde um será o .html com o código
+        html e o outro será .js com o código Java Script. Lembre de lincar o .html ao .js.
+    </p>
+    <span id="dois"><button onclick="meuSegundoPrograma()" id="buttom02">click</button></span>
+
+    <p>3. Utilizando o exemplo da primeira questão, declare algumas variáveis, de tipos de
+        diferente, e mande exibir no console.</p>
+    <span id="tres"><button onclick="meuTerceiroPrograma()" id="buttom03">click</button></span>
+
+    <p>4. Crie um novo programa que solicite via prompt seu nome e o exiba na página web
+        seu nome via label do html.</p>
+        <span id="quatro"><button onclick="meuQuartoPrograma()" id="buttom04">click</button></span>
+</body>
+
+</html>
