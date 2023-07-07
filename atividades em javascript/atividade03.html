@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="tables">
+    <div class="tables">
+
+        <div class="table2">
+            <p>1. Desenvolva um algoritmo que leia a quantidade de vezes que você deseja utilizar a academia e a
+                quantidade de
+                pessoa que fazem parte do plano.</p>
+            <p>Dependendo da quantidade pessoas atribua o desconto correspondente.</p>
+            <p>Ao final exibir o valor que você deve pagar de mensalidade.</p>
+        </div>
+        <div class="table">
+            <p><b>---PLANO MENSAL---</b><br />
+                5X/SEMANA - R$ 89,00<br />
+                3X/SEMANA - R$ 79,00<br />
+                2X/SEMANA - R$ 69,00<br />
+            <p><b>DESCONTO FAMÍLIA</b><br />
+                DUAS PESSOAS - 5% <br />
+                3 OU MAIS PESSOAS - 10%</p>
+        </div>
+        <div class="table">
+            <label for="q1i1">Vezes por semana:<br />
+                <input type="radio" id="vezesSemana" name="semana" value='2' checked>2
+
+                <input type="radio" id="vezesSemana" name="semana" value='3'>3
+
+                <input type="radio" id="vezesSemana" name="semana" value='5'>5
+            </label>
+
+            <label for="q1i2">Qtd Pessoas no plano:
+                <input type="number" id="qtdPessoas" required>
+            </label>
+            <button onclick="academia()">Calcular</button>
+            <span id="q1Res"></span>
+        </div>
+    </div>
+    </p>
+
+    <div class="tables">
+        <div class="table2">
+            <p>2. Desenvolva um algoritmo que simule uma loja de venda de assai no seu bairro, para que o mesmo fique
+                mais simples vamos considerar que a unidade de medida básica de venda do assai seja <b>100 gramas</b> e
+                esta
+                corresponda a <b>R$3,89</b>.</p>
+            <p>Observação:</p>
+            <p>Teremos uma quantidade indeterminada de vendas.</p>
+            <p>Ao final deverá ser exibida, em KG, a quantidade de assai vendida e o correspondente valor em
+                reais.</p>
+            <p>
+        </div>
+
+        <div class="table">
+            <label for="q2i1">gramas:<br />
+                <input type="number" id="gramas" required>
+            </label>
+
+            <button onclick="assaiVender()">Vender</button>
+            <span id="q2Res1"></span>
+            <button onclick="assaiTotalizar()">Totalizar</button>
+            <span id="q2Res2"></span>
+        </div>
+    </div>
+
+    <div class="tables">
+        <div class="table2">
+            <p> 3. Desenvolva um algoritmo que simule um leilão de venda de gado, semelhante a este que vemos no
+                canal do boi.</p>
+            <p> Ele deve ler uma quantidade de 5 lotes (número que corresponde a um grupo de bois) e o
+                correspondente valor de cada um. </p>
+            <p> A cada interação deve perguntar ao usuário se ele deseja comprar ou
+                não o lote. </p>
+            <p> Ao fim deve exibir o valor total dos lotes e o valor correspondente aos lotes que o usuário
+                comprou.</p>
+        </div>
+        <div class="table">
+            <button onclick="leilao()">Iniciar</button>
+
+            <span id="q3Res1"></span>
+            <span id="q3Res2"></span>
+        </div>
+    </div>
+
+    <script src="atividade03.js"></script>
+</body>
+
+</html>

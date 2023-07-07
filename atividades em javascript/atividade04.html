@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>a) Crie um programa que tenha uma função Media(), que vai receber as 2 notas de um
+                aluno e retornar a sua média para o programa principal.</p>
+            <label for="nota1">nota1:<input type="number" min="0" max="10" id="nota1"></label>
+            <label for="nota2">nota2:<input type="number" min="0" max="10" id="nota2"></label>
+            <button onclick="Media()">calcular</button>
+            <span id="res1"></span>
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>b) Faça um programa que possua uma função chamada Potencia(), que vai receber
+                dois parâmetros numéricos (base e expoente) e vai calcular o resultado da exponen ciação.
+                Ex: Potencia(5,2) vai calcular 52 = 25</p>
+            <label for="base">base:<input type="number" id="base"></label>
+            <label for="expoente">expoente:<input type="number" id="expoente"></label>
+            <button onclick="Potencia()">calcular</button>
+            <span id="res2"></span>
+            <link rel="stylesheet" href="style.css">
+        </div>
+    </div>
+    <div>
+        <div>
+            <p>c) A Crie um programa que tenha uma função que controle a inserção de valores em
+                um array e outra que permite a pesquisa de um valor no array.</p>
+            <label for="incluir">valor:<input type="text" id="valor"></label>
+            <button onclick="incluir()">incluir</button>
+            <button onclick="pesquisar()">pesquisar</button>
+            <span id="pesquisa"></span>
+            <span id="lista"></span>
+        </div>
+    </div>
+
+    <script>
+        function Media() {
+            let nota1 = parseFloat(document.getElementById("nota1").value)
+            let nota2 = parseFloat(document.getElementById("nota2").value)
+            let media = (nota1 + nota2) / 2
+            document.getElementById('res1').innerHTML = `Média: ${media}`
+        }
+        function Potencia() {
+            let base = parseFloat(document.getElementById('base').value)
+            let expoente = parseFloat(document.getElementById('expoente').value)
+            let potencia = base ** expoente
+            document.getElementById('res2').innerHTML = `Potencia: ${potencia}`
+        }
+        let array = []
+        function incluir() {
+            let valor = document.getElementById("valor").value
+            console.log(valor)
+            if (valor!=='') {
+                array.push(valor)
+                document.getElementById('lista').innerHTML = `${array}`
+            }
+            document.getElementById('valor').value = ''
+        }
+        function pesquisar() {
+            console.log(array)
+            let valor = document.getElementById("valor").value
+            let vezes = 0
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == valor) {
+                    vezes++
+                }
+            }
+            if (vezes > 0) {
+                document.getElementById('pesquisa').innerHTML = ` ${valor} está presente no Array`
+            } else {
+                document.getElementById('pesquisa').innerHTML = ` ${valor} NÁO está presente no Arrray`
+            }
+        }
+    </script>
+</body>
+
+</html>
