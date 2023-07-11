@@ -1,9 +1,7 @@
 function academia() {
-
     document.getElementById('q1Res').innerHTML = ''
     vSemana = parseInt(document.getElementById("vezesSemana").value)
     qtdPessoas = parseInt(document.getElementById("qtdPessoas").value)
-
     if (vSemana == 2) {
         totalApagar = 69
     }
@@ -13,7 +11,6 @@ function academia() {
     else {
         totalApagar = 89
     }
-
     if (qtdPessoas == 2) {
         valorApagar = totalApagar * 0.95
         document.getElementById("q1Res").innerHTML = `R$${totalApagar} - 5% = R$${valorApagar} <br/> X ${qtdPessoas} pessoas =  R$${valorApagar * qtdPessoas}`
@@ -23,7 +20,7 @@ function academia() {
         document.getElementById("q1Res").innerHTML = `R$${totalApagar} - 10% = R$${valorApagar} <br/> X ${qtdPessoas} pessoas =  R$${valorApagar * qtdPessoas}`
     }
     else {
-        if (qtdPessoas < 1|| isNaN(qtdPessoas)) {
+        if (qtdPessoas < 1 || isNaN(qtdPessoas)) {
             document.getElementById("q1Res").innerHTML = "Infome a quantidade de pessoas!"
         }
         else {
@@ -31,7 +28,6 @@ function academia() {
             document.getElementById("q1Res").innerHTML = `${qtdPessoas} pessoa TOTAL: R$${valorApagar * qtdPessoas}`
         }
     }
-
 }
 
 let sumPeso = 0, sumTotal = 0
@@ -45,19 +41,27 @@ function assaiVender() {
     sumPeso += peso
     sumTotal += totalAPagar
 }
-
 function assaiTotalizar() {
     document.getElementById("q2Res2").innerHTML = ` ${sumPeso / 1000}kilos <br/> R$${sumTotal} `
 }
-let sumLotes=0
-function leilao() {
-    let lotes = [200, 400, 600, 900, 1600]
-    for (let i = 1; i < lotes.length; i++) {
-        sumLotes += lotes[i]
-        document.getElementById("q3Res1").innerHTML = `${i}º lote  R$ ${lotes[i]} <button onclick="continue">passar</button> <button onclick=comprar(lotes[i])>comprar</button>`
-    }
-}
 
-function comprar(lotes){
-    console.log(lotes)
+function leilao() {
+    let quantidadeLotes = 5;
+    let valoresLotes = [];
+    for (let i = 0; i < quantidadeLotes; i++) {
+        let valor = parseFloat(prompt(`Digite o valor do lote ${i + 1}:`));
+        valoresLotes.push(valor);
+    }
+    let lotesComprados = [];
+    let valorTotal = 0;
+    for (let i = 0; i < quantidadeLotes; i++) {
+        let comprarLote = prompt(`Deseja comprar o lote ${i + 1}? (S/N)`);
+        if (comprarLote.toUpperCase() === 'S') {
+            lotesComprados.push(i + 1);
+            valorTotal += valoresLotes[i];
+        }
+    }
+    document.getElementById('q3Res1').innerHTML = `Resultado do Leilão<br>
+Valor total dos lotes:", ${valorTotal}<br/>
+Lotes comprados:", ${lotesComprados.join(', ')}`;
 }

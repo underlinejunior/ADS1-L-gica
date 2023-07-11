@@ -6,35 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <div>
+    <div class="tables">
+        <div class="table2">
             <p>a) Crie um programa que tenha uma função Media(), que vai receber as 2 notas de um
                 aluno e retornar a sua média para o programa principal.</p>
+        </div>
+        <div class="table">
             <label for="nota1">nota1:<input type="number" min="0" max="10" id="nota1"></label>
             <label for="nota2">nota2:<input type="number" min="0" max="10" id="nota2"></label>
             <button onclick="Media()">calcular</button>
             <span id="res1"></span>
         </div>
     </div>
-    <div>
-        <div>
+    <div class="tables">
+        <div class="table2">
             <p>b) Faça um programa que possua uma função chamada Potencia(), que vai receber
                 dois parâmetros numéricos (base e expoente) e vai calcular o resultado da exponen ciação.
                 Ex: Potencia(5,2) vai calcular 52 = 25</p>
+        </div>
+        <div class="table">
             <label for="base">base:<input type="number" id="base"></label>
             <label for="expoente">expoente:<input type="number" id="expoente"></label>
             <button onclick="Potencia()">calcular</button>
             <span id="res2"></span>
-            <link rel="stylesheet" href="style.css">
         </div>
     </div>
-    <div>
-        <div>
+    <div class="tables">
+        <div class="table2">
             <p>c) A Crie um programa que tenha uma função que controle a inserção de valores em
                 um array e outra que permite a pesquisa de um valor no array.</p>
+        </div>
+        <div class="table">
             <label for="incluir">valor:<input type="text" id="valor"></label>
             <button onclick="incluir()">incluir</button>
             <button onclick="pesquisar()">pesquisar</button>
@@ -43,6 +49,40 @@
         </div>
     </div>
 
+    <div class="tables">
+        <div class="table2">
+            <p>d) Crie uma classe carro que possua placa, proprietário e modelo.</p>
+        </div>
+        <div class="table">
+            <span id="resD"style="text-align:left;font-size:1rem">
+                class Carro {<br>
+                constructor(placa, proprietario, modelo) {<br>
+                    this.placa = placa;<br>
+                    this.proprietario = proprietario;<br>
+                    this.modelo = modelo;<br>
+                }
+            </span>
+        </div>
+    </div>
+
+    <div class="tables">
+        <div class="table2">
+            <p>e) Crie uma aplicação simples, que utilize arrays, e armazene um numero qualquer de objetos do tipo carro
+                em um array. </p>
+            <p>A aplicação deve ter as funções de cadastrar, pesquisar, listar e excluir os objetos do tipo carro.</p>
+            <span id="resPesquisa"></span>
+        </div>
+        <div class="table">
+            <label for="placa">placa:<input type='text' id='placa'></label>
+            <label for="modelo">modelo:<input type='text' id='modelo'></label>
+            <label for="proprietario">proprietario:<input type='text' id='proprietario'></label>
+            <button onclick="addCarro()">cadastrar</button>
+            <button onclick="findCarro()">Pesquisar</button>
+            <label for="pesquisaplaca">placa:<input type='text' id='pesquisarPlaca'></label>
+            <button onclick="listCarros()">Listar</button>
+
+        </div>
+    </div>
     <script>
         function Media() {
             let nota1 = parseFloat(document.getElementById("nota1").value)
@@ -60,7 +100,7 @@
         function incluir() {
             let valor = document.getElementById("valor").value
             console.log(valor)
-            if (valor!=='') {
+            if (valor !== '') {
                 array.push(valor)
                 document.getElementById('lista').innerHTML = `${array}`
             }
@@ -81,6 +121,59 @@
                 document.getElementById('pesquisa').innerHTML = ` ${valor} NÁO está presente no Arrray`
             }
         }
+
+
+        let carros = [];
+        class Carro {
+            constructor(placa, proprietario, modelo) {
+                this.placa = placa;
+                this.proprietario = proprietario;
+                this.modelo = modelo;
+            }
+        }
+        function addCarro() {
+            let placaCarro = document.getElementById('placa').value;
+            let modeloCarro = document.getElementById('modelo').value;
+            let proprietarioCarro = document.getElementById('proprietario').value;
+            let novoCarro = new Carro(placaCarro, proprietarioCarro, modeloCarro);
+            carros.push(novoCarro);
+            limparCampos();
+        }
+        function findCarro() {
+            let pesquisaCarro = document.getElementById('pesquisarPlaca').value;
+            let resultado = '';
+            for (let i = 0; i < carros.length; i++) {
+                if (carros[i].placa === pesquisaCarro) {
+                    resultado = `Placa: ${carros[i].placa} | Modelo: ${carros[i].modelo} | Proprietário: ${carros[i].proprietario}`;
+                    break;
+                }
+            }
+            if (resultado === '') {
+                resultado = 'Sem resultados';
+            }
+            document.getElementById('resPesquisa').innerHTML = resultado;
+        }
+        function listCarros() {
+            let resultado = '';
+            for (let i = 0; i < carros.length; i++) {
+                resultado += `Placa: ${carros[i].placa}  Modelo: ${carros[i].modelo} Proprietário: ${carros[i].proprietario} <button onclick="deleteCarro(${i})">X</button> <br>------<br>`;
+            }
+            if (resultado === '') {
+                resultado = 'Nenhum carro cadastrado';
+            }
+            document.getElementById('resPesquisa').innerHTML = resultado;
+        }
+        function limparCampos() {
+            document.getElementById('placa').value = '';
+            document.getElementById('modelo').value = '';
+            document.getElementById('proprietario').value = '';
+        }
+        function deleteCarro(pos) {
+            let resultado = '';
+            carros.splice(pos, 1);
+            listCarros();
+        }
+
     </script>
 </body>
 
